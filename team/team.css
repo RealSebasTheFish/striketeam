@@ -1,0 +1,56 @@
+document, body {
+    margin: 0;
+    padding: 0;
+}
+
+#main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-image: url("../images/arse_background.png");
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    font-family: "Radley", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#container {
+    height: 85%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#text-container, #countdown-container  {
+    flex: 30%;
+    text-align: center;
+    color: white;
+}
+
+#text-container {
+    font-size: 3vh;
+}
+
+#countdown-container {
+    font-size: 5vh;
+}
+
+#gallery-container {
+    flex: 40%;
+    display: flex;
+}
+
+.gallery-image-container {
+    flex: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-image {
+    width: 50%;
+    border: solid 0.2em brown;
+}

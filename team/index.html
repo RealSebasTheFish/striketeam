@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" lang="en-US" />
+        <link type="text/css" rel="stylesheet" href="team.css" />
+
+        <!-- Import Radley font from Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Radley:ital@0;1&display=swap" rel="stylesheet">
+        
+        <script>
+            window.addEventListener("load", (event) => {
+                var UNIXtime = 1756994400 - Math.floor(Date.now()/1000);
+                var days = Math.floor(UNIXtime / 86400);
+                var hours = Math.floor((UNIXtime % 86400) / 3600);
+                var minutes = Math.floor((UNIXtime % 3600) / 60);
+                var seconds = UNIXtime % 60;
+
+                var countdown = document.getElementById("countdown");
+
+                countdown.textContent = days + " days " + hours + " hours " + minutes + " minutes " + seconds + " seconds";
+
+                setInterval(function(){
+                    console.log(Math.floor(Date.now()/1000));
+                    UNIXtime = 1756994400 - Math.floor(Date.now()/1000);
+                    days = Math.floor(UNIXtime / 86400);
+                    hours = Math.floor((UNIXtime % 86400) / 3600);
+                    minutes = Math.floor((UNIXtime % 3600) / 60);
+                    seconds = UNIXtime % 60;
+
+                    countdown.textContent = days + " D | " + hours + " H | " + minutes + " M | " + seconds + " S";
+                }, 1000)
+            });
+        </script>
+    </head>
+    <body>
+        <div id="main">
+            <div id="container">
+                <div id="text-container">
+                    <h1>Coming Soon</h1>
+                </div>
+                <div id="countdown-container">
+                    <h1 id="countdown"></h1>
+                </div>
+                <div id="gallery-container">
+                    <div class="gallery-image-container">
+                        <img class="gallery-image" src="../images/goku_mannequin.png">
+                    </div>
+                    <div class="gallery-image-container">
+                        <img class="gallery-image" src="../images/nezuko_mannequin.png">
+                    </div>
+                    <div class="gallery-image-container">
+                        <img class="gallery-image" src="../images/natsu_mannequin.png">
+                    </div>
+                    <div class="gallery-image-container">
+                        <img class="gallery-image" src="../images/sasuke_mannequin.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

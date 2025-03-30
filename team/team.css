@@ -24,14 +24,10 @@ document, body {
     flex-direction: column;
 }
 
-#text-container, #countdown-container  {
+#countdown-container  {
     flex: 30%;
     text-align: center;
     color: white;
-}
-
-#text-container {
-    font-size: 3vh;
 }
 
 #countdown-container {
@@ -52,5 +48,21 @@ document, body {
 
 .gallery-image {
     width: 50%;
-    border: solid 0.2em brown;
+    border: solid 0.1em white;
+}
+
+#social-container {
+    flex: 10%;
+    width: 20%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.social-media-container {
+    width: 30%;
+}
+
+.social-media-image {
+    width: 100%;
 }

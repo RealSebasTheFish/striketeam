@@ -19,7 +19,7 @@
 
                 var countdown = document.getElementById("countdown");
 
-                countdown.textContent = days + " days " + hours + " hours " + minutes + " minutes " + seconds + " seconds";
+                countdown.textContent = days + " D | " + hours + " H | " + minutes + " M | " + seconds + " S";
 
                 setInterval(function(){
                     console.log(Math.floor(Date.now()/1000));
@@ -37,8 +37,13 @@
     <body>
         <div id="main">
             <div id="container">
-                <div id="text-container">
-                    <h1>Coming Soon</h1>
+                <div id="social-container">
+                    <div class="social-media-container">
+                        <img class="social-media-image" src="../images/instagram.png">
+                    </div>
+                    <div class="social-media-container">
+                        <img class="social-media-image" src="../images/tiktok.png">
+                    </div>
                 </div>
                 <div id="countdown-container">
                     <h1 id="countdown"></h1>

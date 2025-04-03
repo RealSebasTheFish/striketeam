@@ -4,14 +4,13 @@ document, body {
 }
 
 body {
-    background-color: #9F8383;
+    background-image: url("images/bowlingbackground.jpg");
     font-family: "Radley", serif;
     font-weight: 400;
     font-style: normal;
 }
 
 #container {
-    height: 100vh;
     flex: 60%;
 }
 
@@ -26,7 +25,6 @@ body {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: stretch;
-    height: 100vh;
     margin: 0;
     padding: 0;
     flex: 15%
@@ -50,8 +48,8 @@ body {
 
 #header {
     background-color: #C8AAAA;
-    height: 15vh;
     display: flex;
+    height: 15vh;
 }
 
 #logo-container {
@@ -60,6 +58,7 @@ body {
 
 #nav-container {
     flex: 70%;
+    margin-top: -3vh;
     display: flex;
     flex-direction: column;
 }
@@ -69,7 +68,6 @@ body {
     padding: 1.5vh 2vw;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    margin-bottom: -3%;
 }
 
 .nav-button p {
@@ -97,7 +95,6 @@ nav {
 #logo {
     width: 100%;
     max-height: 20vh;
-    margin-bottom: -20%;
     object-fit: contain;
 }
 
@@ -107,19 +104,19 @@ nav {
     object-fit: contain;
 }
 
+#spacing {
+    width: 100%;
+    display: flex;
+    height: 10vh;
+}
+
 #logo-container {
     width: 30%;
+    margin-top: -10vh;
 }
 
 #content {
     background-color: #FFDAB3;
-    height: 85vh;
-    display: flex;
-    flex-direction: column;
-}
-
-#spacing {
-    flex: 10%;
 }
 
 #motto {
@@ -146,11 +143,11 @@ nav {
 }
 
 #posts {
-    flex: 60%;
+    padding: 5vh 0;
     border-top: solid thick #847260;
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .post-container {
@@ -164,12 +161,10 @@ nav {
 .post {
     width: 90%;
     height: 90%;
-    display: flex;
-    flex-direction: column;
+
 }
 
 .post-tab {
-    flex: 10%;
     background-color: #FFF6EC;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -179,17 +174,17 @@ nav {
     color: block;
     display: flex;
     align-items: center;
+    padding: 0.5vh 0;
 }
 
 .post-tab p {
     margin: 0;
     padding: 0;
-    font-size: 1.75vh;
+    font-size: 2vh;
     margin-left: 1vw;
 }
 
 .post-content {
-    flex: 90%;
     background-color: #FFF6EC;
     border: solid thin black;
     color: #766A5D;
@@ -291,11 +286,11 @@ nav {
 .see-more {
     text-decoration: underline;
     color: #24201C;
+    font-size: 1.5vh;
 }
 
 #secret-link {
-    color: black;
-    text-decoration: none;
+    color: blue;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -313,19 +308,46 @@ nav {
     }
 
     #header {
-        flex-direction: column;
-        height: auto;
+        display:none;
     }
 
     #logo-container {
         flex: 50%;
+        margin-top: 0;
     }
 
     #nav-container {
         flex: 50%;
+        margin-top: 0;
+        width: 100%;
     }
 
     #content {
         height: auto;
+    }
+
+    #spacing {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .nav-button {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border: solid thin black;
+    }
+
+    .nav-button p {
+        font-size: 3vh;
+    }
+
+    #posts {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .post {
+        margin: 3vh 0;
     }
 }

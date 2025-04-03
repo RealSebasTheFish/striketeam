@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" lang="en-US" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link type="text/css" rel="stylesheet" href="team.css" />
 
         <!-- Import Radley font from Google Fonts -->
@@ -17,9 +18,9 @@
                 var minutes = Math.floor((UNIXtime % 3600) / 60);
                 var seconds = UNIXtime % 60;
 
-                var countdown = document.getElementById("countdown");
+                var countdown = document.getElementById("countdown-container");
 
-                countdown.textContent = days + " D | " + hours + " H | " + minutes + " M | " + seconds + " S";
+                countdown.innerHTML = "<p class=\"timer-entry\">" + days + " D</p><p class=\"timer-entry\">" + hours + " H</p><p class=\"timer-entry\">" + minutes + " M</p><p class=\"timer-entry\">" + seconds + " S</p>";
 
                 setInterval(function(){
                     console.log(Math.floor(Date.now()/1000));
@@ -29,7 +30,7 @@
                     minutes = Math.floor((UNIXtime % 3600) / 60);
                     seconds = UNIXtime % 60;
 
-                    countdown.textContent = days + " D | " + hours + " H | " + minutes + " M | " + seconds + " S";
+                    countdown.innerHTML = "<p class=\"timer-entry\">" + days + " D</p><p class=\"timer-entry\">" + hours + " H</p><p class=\"timer-entry\">" + minutes + " M</p><p class=\"timer-entry\">" + seconds + " S</p>";
                 }, 1000)
             });
         </script>
@@ -37,16 +38,7 @@
     <body>
         <div id="main">
             <div id="container">
-                <div id="social-container">
-                    <div class="social-media-container">
-                        <img class="social-media-image" src="../images/instagram.png">
-                    </div>
-                    <div class="social-media-container">
-                        <img class="social-media-image" src="../images/tiktok.png">
-                    </div>
-                </div>
                 <div id="countdown-container">
-                    <h1 id="countdown"></h1>
                 </div>
                 <div id="gallery-container">
                     <div class="gallery-image-container">
@@ -60,6 +52,14 @@
                     </div>
                     <div class="gallery-image-container">
                         <img class="gallery-image" src="../images/sasuke_mannequin.png">
+                    </div>
+                </div>
+                <div id="social-container">
+                    <div class="social-media-container">
+                        <a href="https://www.instagram.com/yorkstrikes/"><img class="social-media-image" src="../images/instagram.png"></a>
+                    </div>
+                    <div class="social-media-container">
+                        <a href="https://www.tiktok.com/@yorkstrikes"><img class="social-media-image" src="../images/tiktok.png"></a>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,26 @@
+[
+    {
+      "id": "1",
+      "title": "Prankers Code 2025",
+      "category": "events",
+      "date": "2025-06-29",
+      "folder": "prankers-code-2025",
+      "coverImageIndex": 2
+    },
+    {
+      "id": "4",
+      "title": "Project ??????",
+      "category": "events",
+      "date": "2025-??-??",
+      "folder": "project-unknown",
+      "isEmpty": true
+    },
+    {
+      "id": "5",
+      "title": "Mission: ?????????",
+      "category": "shenanigans",
+      "date": "2025-??-??",
+      "folder": "mission-unknown",
+      "isEmpty": true
+    }
+  ]
